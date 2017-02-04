@@ -1,0 +1,79 @@
+body
+{
+    background-image: url(img/bg2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+#Menu
+{
+    transition: 0.5s linear;
+    width: 100%;
+    background-color: #21172a;
+    opacity: 0.9;
+}
+nav a, nav:before, nav div:before
+{
+    font-size: 15px;
+    display: inline-block;
+    font-weight: bold;
+    padding: 33px 0;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    vertical-align: middle;
+}
+nav a
+{
+    width: 9%;
+    text-decoration: none;
+}
+nav a:hover
+{
+    background-color: #361625;
+    text-decoration: none;
+}
+@media (max-width: 920px)
+{
+    nav
+    {
+        width: 100%;
+    }
+    nav a
+    {
+        padding: 10px 0 10px 0;
+        width: 100%;
+        transition: 0.5s linear;
+    }
+    nav:before, nav div:before
+    {
+        margin: 5px;
+        padding: 5px;
+        width: 50px;
+        float: right;
+        border: 3px solid #fff;
+        border-radius: 10px;
+        transition: 0.5s linear;
+    }
+    nav:before
+    {
+        content: url(img/sm.png);
+    }
+    nav:focus:before
+    {
+        transition: 0.5s linear;
+        content: none;
+    }
+    nav:focus div:before
+    {
+        transition: 0.5s linear;
+        content: url(img/sm.png);
+    }
+    nav:not(:focus) div:not(:active)
+    {
+        transition: 0.5s linear;
+        display: none;
+    }
+}
